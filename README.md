@@ -46,7 +46,7 @@ make
 ```
 Or with luarocks:
 ``` 
-TO DO
+luarocks install lualines
 ```
 
 ##Examples

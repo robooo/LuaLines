@@ -1,2 +1,2 @@
 build:
-		luarocks make lualines-1.0-0.rockspec
+		luarocks build lualines-1.0-0.rockspec

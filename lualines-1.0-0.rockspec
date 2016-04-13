@@ -1,7 +1,8 @@
-package = "lualines"
+package = "LuaLines"
 version = "1.0-0"
 source = {
-    url = "git://github.com/robooo/lualines"
+    url = "git://github.com/robooo/lualines",
+    tag = "v1.0"
 }
 description = {
     summary = "LuaLines, a tiny line parser",
