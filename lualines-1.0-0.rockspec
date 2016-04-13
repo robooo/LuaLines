@@ -1,12 +1,12 @@
-package = "LuaLines"
+package = "lualines"
 version = "1.0-0"
 source = {
-    url = "https://github.com/robooo/LuaLines.git"
+    url = "git://github.com/robooo/lualines"
 }
 description = {
     summary = "LuaLines, a tiny line parser",
     detailed = "Small line parser written in pure Lua",
-    homepage = "https://github.com/robooo/LuaLines.git",
+    homepage = "https://github.com/robooo/lualines",
     license = "MIT"
 }
 dependencies = {
@@ -21,6 +21,8 @@ build = {
         ["lualines.methods"] = "src/lualines/methods.lua"
     },
     install = {
-        bin = { "src/bin/lualines"}
+        bin = {
+            lualines = "src/bin/lualines"
+        }
     }
 }
