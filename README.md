@@ -1,4 +1,4 @@
-# LuaLines
+# LuaLines  [![Build Status](https://travis-ci.org/robooo/lualines.svg?branch=master)](https://travis-ci.org/robooo/lualines) [![Coverage Status](https://coveralls.io/repos/github/robooo/lualines/badge.svg?branch=master)](https://coveralls.io/github/robooo/lualines?branch=master)
 >*Small line parser written in pure Lua*
 
 ##Overview
