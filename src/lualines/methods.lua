@@ -1,20 +1,12 @@
 -- FIND function based on SINGLE PATTERN 
 local function single_parse (s_key)
 	local final_parse = {}
-	local parsed = {}
-	local pattern_found = 0
 
-	for line in io.lines(arg[#arg]) do	
+	for line in io.lines(arg[#arg]) do
 		if string.match(line, s_key) ~= nil then
-			pattern_found = 1
-			parsed[#parsed + 1] = line
+			final_parse[#final_parse + 1] = line:gsub("^%s*", "")
 		end
 	end
-
-	for _,v in ipairs(parsed) do 	-- save to final_parse table
-		final_parse[#final_parse+1] = v
-	end
-	parsed = {}
 
 	return final_parse
 end
@@ -28,16 +20,14 @@ local function multi_parse (patterns)
 	for line in io.lines(arg[#arg]) do
 		if string.match(line, patterns[#patterns]) ~= nil then
 			while #patterns - num_found ~= 0 do
-
 				if string.match(line, patterns[#patterns - num_found]) ~= nil then
 					num_found = num_found + 1
 				else
-					num_found = 1
 					break
 				end
 
 				if num_found == #patterns then
-					parsed[#parsed + 1] = line
+					parsed[#parsed + 1] = line:gsub("^%s*", "")
 				end
 			end
 			num_found = 1
@@ -66,7 +56,7 @@ local function inner_parse (first_tag, last_tag, patterns)
 		
 		if string.match(line, first_tag) ~= nil then 	-- first tag found, create temporary table with patterns
 			tag_found = 1
-			for i,v in ipairs(patterns) do
+			for i,_ in ipairs(patterns) do
 				temp_patterns[i] = patterns[i]
 			end
 		end

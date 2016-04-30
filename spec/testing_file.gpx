@@ -1,0 +1,166 @@
+<?xml version="1.0"?>
+<gpx version="1.1" creator="GDAL 1.10.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ogr="http://osgeo.org/gdal" xmlns="http://www.topografix.com/GPX/1/1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+<metadata><bounds minlat="47.600000000000001" minlon="16.600000300000001" maxlat="49.699998999999998" maxlon="22.699963700000001"/></metadata>
+<wpt lat="47.8707791" lon="16.6480066">
+  <extensions>
+    <ogr:osm_id>448136</ogr:osm_id>
+    <ogr:highway>traffic_signals</ogr:highway>
+    <ogr:other_tags>&quot;traffic_signals:direction&quot;=&gt;&quot;backward&quot;</ogr:other_tags>
+  </extensions>
+</wpt>
+<wpt lat="47.9576349" lon="16.787799">
+                <name>Jois</name>
+  <extensions>
+    <ogr:osm_id>538174</ogr:osm_id>
+    <ogr:other_tags>&quot;traffic_sign&quot;=&gt;&quot;city_limit&quot;</ogr:other_tags>
+  </extensions>
+</wpt>
+<wpt lat="48.1896356" lon="17.2557963">
+  <extensions>
+    <ogr:osm_id>702570</ogr:osm_id>
+    <ogr:highway>crossing</ogr:highway>
+  </extensions>
+</wpt>
+<wpt lat="48.1938643" lon="17.2649011">
+  <extensions>
+    <ogr:osm_id>768508</ogr:osm_id>
+    <ogr:other_tags>&quot;railway&quot;=&gt;&quot;level_crossing&quot;</ogr:other_tags>
+  </extensions>
+</wpt>
+<wpt lat="48.177734" lon="17.1675552">
+  <extensions>
+    <ogr:osm_id>1052637</ogr:osm_id>
+    <ogr:highway>crossing</ogr:highway>
+    <ogr:other_tags>&quot;crossing&quot;=&gt;&quot;traffic_signals&quot;</ogr:other_tags>
+  </extensions>
+</wpt>
+<wpt lat="48.1773219" lon="17.167633">
+  <extensions>
+    <ogr:osm_id>1052638</ogr:osm_id>
+    <ogr:highway>traffic_signals</ogr:highway>
+  </extensions>
+</wpt>
+<wpt lat="48.164894" lon="17.164776">
+  <extensions>
+    <ogr:osm_id>1201129</ogr:osm_id>
+    <ogr:highway>crossing</ogr:highway>
+    <ogr:other_tags>&quot;crossing&quot;=&gt;&quot;uncontrolled&quot;</ogr:other_tags>
+  </extensions>
+</wpt>
+<wpt lat="48.1595515" lon="17.1364958">
+  <name>Zimny stadion</name>
+  <extensions>
+    <ogr:osm_id>1201145</ogr:osm_id>
+    <ogr:other_tags>&quot;bus&quot;=&gt;&quot;yes&quot;,&quot;operator&quot;=&gt;&quot;DPB&quot;,&quot;public_transport&quot;=&gt;&quot;stop_position&quot;,&quot;trolleybus&quot;=&gt;&quot;yes&quot;</ogr:other_tags>
+  </extensions>
+</wpt>
+<rte>
+  <name>Cintorinska</name>
+  <extensions>
+    <ogr:osm_id>7304</ogr:osm_id>
+    <ogr:highway>residential</ogr:highway>
+    <ogr:other_tags>&quot;is_in&quot;=&gt;&quot;Ivanka pri Dunaji&quot;</ogr:other_tags>
+  </extensions>
+  <rtept lat="48.1852385" lon="17.2485557">
+  </rtept>
+  <rtept lat="48.1859679" lon="17.2500213">
+  </rtept>
+  <rtept lat="48.185984" lon="17.2500659">
+  </rtept>
+  <rtept lat="48.186591" lon="17.2516236">
+  </rtept>
+  <rtept lat="48.186881" lon="17.2524445">
+  </rtept>
+  <rtept lat="48.1869846" lon="17.2528656">
+  </rtept>
+  <rtept lat="48.1871463" lon="17.2533306">
+  </rtept>
+  <rtept lat="48.1875994" lon="17.2542926">
+  </rtept>
+  <rtept lat="48.1876568" lon="17.2544046">
+  </rtept>
+  <rtept lat="48.1877042" lon="17.2544716">
+  </rtept>
+  <rtept lat="48.1877689" lon="17.2546343">
+  </rtept>
+  <rtept lat="48.1877979" lon="17.2547184">
+  </rtept>
+  <rtept lat="48.1880705" lon="17.2553379">
+  </rtept>
+</rte>
+<rte>
+  <name>Holleho</name>
+  <extensions>
+    <ogr:osm_id>7305</ogr:osm_id>
+    <ogr:highway>residential</ogr:highway>
+    <ogr:other_tags>&quot;is_in&quot;=&gt;&quot;Ivanka pri Dunaji&quot;</ogr:other_tags>
+  </extensions>
+  <rtept lat="48.1877979" lon="17.2547184">
+  </rtept>
+  <rtept lat="48.1872944" lon="17.2552661">
+  </rtept>
+  <rtept lat="48.1872507" lon="17.2553136">
+  </rtept>
+</rte>
+<rte>
+  <name>Dlha</name>
+  <extensions>
+    <ogr:osm_id>7317</ogr:osm_id>
+    <ogr:highway>residential</ogr:highway>
+    <ogr:other_tags>&quot;is_in&quot;=&gt;&quot;Ivanka pri Dunaji&quot;</ogr:other_tags>
+  </extensions>
+  <rtept lat="48.1877667" lon="17.2562217">
+  </rtept>
+  <rtept lat="48.1877528" lon="17.2562412">
+  </rtept>
+  <rtept lat="48.1877366" lon="17.2562638">
+  </rtept>
+  <rtept lat="48.1871329" lon="17.2571071">
+  </rtept>
+  <rtept lat="48.1863166" lon="17.2582867">
+  </rtept>
+  <rtept lat="48.1863033" lon="17.2583059">
+  </rtept>
+  <rtept lat="48.1854541" lon="17.2594528">
+  </rtept>
+  <rtept lat="48.1846873" lon="17.2604359">
+  </rtept>
+  <rtept lat="48.1845801" lon="17.2605082">
+  </rtept>
+</rte>
+<rte>
+  <extensions>
+    <ogr:osm_id>1847006</ogr:osm_id>
+    <ogr:highway>service</ogr:highway>
+    <ogr:other_tags>&quot;is_in&quot;=&gt;&quot;Hurbanovo&quot;,&quot;oneway&quot;=&gt;&quot;yes&quot;</ogr:other_tags>
+  </extensions>
+  <rtept lat="47.86984" lon="18.1908256">
+  </rtept>
+  <rtept lat="47.8697647" lon="18.1916256">
+  </rtept>
+  <rtept lat="47.8698075" lon="18.1916724">
+  </rtept>
+  <rtept lat="47.8700695" lon="18.1916978">
+  </rtept>
+  <rtept lat="47.8702296" lon="18.1916907">
+  </rtept>
+  <rtept lat="47.8703402" lon="18.1917249">
+  </rtept>
+  <rtept lat="47.8703722" lon="18.1916843">
+  </rtept>
+  <rtept lat="47.8704227" lon="18.1910346">
+  </rtept>
+</rte>
+<rte>
+  <name>Imelska</name>
+  <extensions>
+    <ogr:osm_id>3599042</ogr:osm_id>
+    <ogr:highway>tertiary</ogr:highway>
+    <ogr:other_tags>&quot;bridge&quot;=&gt;&quot;yes&quot;,&quot;is_in&quot;=&gt;&quot;Bohatá&quot;,&quot;layer&quot;=&gt;&quot;1&quot;,&quot;ref&quot;=&gt;&quot;064012&quot;,&quot;source:ref&quot;=&gt;&quot;www.ssc.sk&quot;</ogr:other_tags>
+  </extensions>
+  <rtept lat="47.8898554" lon="18.1986977">
+  </rtept>
+  <rtept lat="47.8899158" lon="18.1985557">
+  </rtept>
+</rte>
+</gpx>

@@ -2,7 +2,7 @@ local getopt = require "alt_getopt"
 local methods = require "lualines.methods"
 local util = require "lualines.util"
 
-local function help (args)
+local function help ()
 	print("\nLuaLines, a tiny line parser \n\n"..
 		[[
 Usage: [-hsvn] [-m num] [-f file] <input file>
@@ -51,10 +51,10 @@ local function main ()
 	local continue = 1 			-- continue or stop in program flow
 	local print_results = 1 -- if -v was typed, don't print results
 
-	local optarg, optind = alt_getopt.get_opts(arg,"f:m:nsv",settings);
+	local optarg = getopt.get_opts(arg,"f:m:nsv",settings);
 	
 	if(#arg<1) then
-		help(arg);
+		help();
 		return nil
 	end
 
@@ -72,6 +72,11 @@ local function main ()
 		end
 
 		if optarg['m'] then
+			while not tonumber(optarg['m']) or tonumber(optarg['m']) < 2 do
+				io.write("Please enter right parameter(2-99): ")
+				optarg['m'] = io.read()
+			end
+			
 			print("Type patterns to find: ")
 			while #patterns ~= tonumber(optarg['m']) do
 					io.write(#patterns + 1 .. ".pattern: ")

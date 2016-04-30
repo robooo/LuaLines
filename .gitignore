@@ -1,5 +1,6 @@
 # Compiled Lua sources
 luac.out
+/luacov.*
 
 # luarocks build files
 *.src.rock
@@ -39,5 +40,5 @@ luac.out
 *.x86_64
 *.hex
 
-#
+#Other
 .DS_Store
