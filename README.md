@@ -91,3 +91,6 @@ and we want get 1. and 4. line
 
 
 Now when we open *save.txt* file, we will see our parsed lines.		
+
+###TODO 
+ * Better file manipulation

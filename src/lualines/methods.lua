@@ -1,8 +1,8 @@
 -- FIND function based on SINGLE PATTERN 
-local function single_parse (s_key)
+local function single_parse (s_key, filepath)
 	local final_parse = {}
 
-	for line in io.lines(arg[#arg]) do
+	for line in io.lines(filepath) do
 		if string.match(line, s_key) ~= nil then
 			final_parse[#final_parse + 1] = line:gsub("^%s*", "")
 		end
@@ -12,12 +12,12 @@ local function single_parse (s_key)
 end
 
 -- FIND function based on MORE PATTERNS
-local function multi_parse (patterns)
+local function multi_parse (patterns, filepath)
 	local final_parse = {}
 	local parsed = {}
 	local num_found = 1
 
-	for line in io.lines(arg[#arg]) do
+	for line in io.lines(filepath) do
 		if string.match(line, patterns[#patterns]) ~= nil then
 			while #patterns - num_found ~= 0 do
 				if string.match(line, patterns[#patterns - num_found]) ~= nil then
@@ -44,7 +44,7 @@ end
 -- if it finds "start tag", next step is to find all patterns in paragraph till "ending tag"
 -- paragraph is parsed just in case there are all patterns between tags
 -- if there is no pattern to find (= 0) inside tags, all text inside in paragraph parsed  
-local function inner_parse (first_tag, last_tag, patterns)
+local function inner_parse (first_tag, last_tag, patterns, filepath)
 	local final_parse = {}
 	local parsed = {}
 	local tag_found = 0
@@ -52,7 +52,7 @@ local function inner_parse (first_tag, last_tag, patterns)
 	local all_found = 0
 	local temp_patterns = {}
 
-	for line in io.lines(arg[#arg]) do
+	for line in io.lines(filepath) do
 		
 		if string.match(line, first_tag) ~= nil then 	-- first tag found, create temporary table with patterns
 			tag_found = 1
@@ -62,10 +62,9 @@ local function inner_parse (first_tag, last_tag, patterns)
 		end
 		
 		if tag_found == 1 then
-			parsed[#parsed + 1] = line
+			parsed[#parsed + 1] = line:gsub("^%s*", "")
 
-			while #patterns - patterns_found ~= 0 do
-				
+			if #patterns - patterns_found ~= 0 then
 				for index, value in pairs (temp_patterns) do
 					if string.match(line, value) ~= nil and all_found == 0 then
 						temp_patterns[index] = nil 
@@ -75,9 +74,6 @@ local function inner_parse (first_tag, last_tag, patterns)
 
 				if #patterns == patterns_found then
 					all_found = 1
-					break
-				else
-					break
 				end
 
 			end

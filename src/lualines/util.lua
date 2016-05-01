@@ -11,9 +11,9 @@ local function check_file (file_path, type)
 end
 
 -- ask at some point if continue and clear table with patterns
-local function question_continue (continue)
+local function question_continue ( )
 	print("Continue? y/n")
-	continue = io.read()
+	local continue = io.read()
 
 	if continue == 'n' or continue == 'N' then
 		continue = nil

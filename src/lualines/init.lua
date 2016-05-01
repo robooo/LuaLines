@@ -50,6 +50,7 @@ local function main ()
 	local final_parse = {}	-- final table parsed lines
 	local continue = 1 			-- continue or stop in program flow
 	local print_results = 1 -- if -v was typed, don't print results
+	local filepath
 
 	local optarg = getopt.get_opts(arg,"f:m:nsv",settings);
 	
@@ -62,13 +63,17 @@ local function main ()
 		print_results = 0
 	end
 
-	util.check_file(arg[#arg])
+	if util.check_file(arg[#arg]) then
+		filepath = arg[#arg]
+	else
+		continue = nil
+	end
 	
 	while continue do
 
 		if optarg['s'] then
 			io.write("Type pattern to find: ")
-			final_parse = methods.single_parse(io.read())
+			final_parse = methods.single_parse(io.read(), filepath)
 		end
 
 		if optarg['m'] then
@@ -76,13 +81,13 @@ local function main ()
 				io.write("Please enter right parameter(2-99): ")
 				optarg['m'] = io.read()
 			end
-			
+
 			print("Type patterns to find: ")
 			while #patterns ~= tonumber(optarg['m']) do
 					io.write(#patterns + 1 .. ".pattern: ")
 					patterns[#patterns + 1] = io.read()
 				end
-				final_parse = methods.multi_parse(patterns)
+				final_parse = methods.multi_parse(patterns, filepath)
 		end
 
 		if optarg['n'] then
@@ -98,7 +103,7 @@ local function main ()
 					io.write(#patterns + 1 .. ".pattern: ")
 					patterns[#patterns + 1] = io.read()
 			end
-			final_parse = methods.inner_parse(first_tag, last_tag, patterns)
+			final_parse = methods.inner_parse(first_tag, last_tag, patterns, filepath)
 		end
 
 		-- if parsing was successful 
@@ -110,6 +115,7 @@ local function main ()
 				end
 			end
 
+			if optarg['f'] then
 			print('\n'.. #final_parse .. ' lines parsed, save to file? y/n')
 			local write_to_file = io.read()
 			
@@ -118,15 +124,16 @@ local function main ()
 					for _,v in ipairs(final_parse) do 
 						file:write(v .. '\n')
 					end
-				file:close()
-				print("Saved...")
+					file:close()
+					print("Saved...")
+				end
 			end
 			patterns = {}
-			continue = util.question_continue(continue)
+			continue = util.question_continue()
 		else
 			print("Nothing found")
 			patterns = {}
-			continue = util.question_continue(continue)	
+			continue = util.question_continue()	
 		end
 	end
 end

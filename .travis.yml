@@ -21,6 +21,7 @@ install:
 
 script:
   - busted --verbose --coverage
+  - luacheck --std max+busted src spec
 
 after_success:
   - luacov-coveralls --exclude $TRAVIS_BUILD_DIR/lua_install
